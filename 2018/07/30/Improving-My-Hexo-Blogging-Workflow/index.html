@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112023430-1"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112023430-1');
+    </script>
+
+    <meta name="description" content="Hexo is a simple static site web framework built using Node.js (similar to other famous blogging frameworks such as Jekyll and Hugo). I’ve been using it for this blog and I’ve really liked using it.">
+<meta name="keywords" content="software-development">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Improving My Hexo Blogging Workflow">
+<meta property="og:url" content="http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/index.html">
+<meta property="og:site_name" content="Joshua Loong">
+<meta property="og:description" content="Hexo is a simple static site web framework built using Node.js (similar to other famous blogging frameworks such as Jekyll and Hugo). I’ve been using it for this blog and I’ve really liked using it.">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/hexo.png">
+<meta property="og:updated_time" content="2019-01-28T13:49:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Improving My Hexo Blogging Workflow">
+<meta name="twitter:description" content="Hexo is a simple static site web framework built using Node.js (similar to other famous blogging frameworks such as Jekyll and Hugo). I’ve been using it for this blog and I’ve really liked using it.">
+<meta name="twitter:image" content="http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/hexo.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../../../../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../../../../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Improving My Hexo Blogging Workflow</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/jquery.timeliny.css">
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="../../../../atom.xml" title="Joshua Loong" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+</head>
+
+<body>
+    
+      <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../../../09/24/Bank-Services-for-Community-Projects/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$("#i-prev").toggle();" onmouseout="$("#i-prev").toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../../03/Topic-Modelling-Song-Lyrics-An-Exploration-in-Unsupervised-Text-Analytics/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$("#i-next").toggle();" onmouseout="$("#i-next").toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$("#i-top").toggle();" onmouseout="$("#i-top").toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$("#i-share").toggle();" onmouseout="$("#i-share").toggle();" onclick="$("#share").toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&text=Improving My Hexo Blogging Workflow"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&title=Improving My Hexo Blogging Workflow"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&is_video=false&description=Improving My Hexo Blogging Workflow"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Improving My Hexo Blogging Workflow&body=Check out this article: http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&title=Improving My Hexo Blogging Workflow"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&title=Improving My Hexo Blogging Workflow"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&title=Improving My Hexo Blogging Workflow"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&title=Improving My Hexo Blogging Workflow"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&name=Improving My Hexo Blogging Workflow&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Deleting-published-posts"><span class="toc-number">1.</span> <span class="toc-text">Deleting published posts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Moving-published-post-back-to-drafts"><span class="toc-number">2.</span> <span class="toc-text">Moving published post back to drafts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thanks-for-reading"><span class="toc-number">3.</span> <span class="toc-text">Thanks for reading!</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Improving My Hexo Blogging Workflow
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">Joshua Loong</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-07-30T04:00:00.000Z" itemprop="datePublished">2018-07-30</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="../../../../tags/software-development/">software-development</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <img src="/2018/07/30/Improving-My-Hexo-Blogging-Workflow/hexo.png">
+<p><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> is a simple static site web framework built using Node.js (similar to other famous blogging frameworks such as Jekyll and Hugo). I’ve been using it for this blog and I’ve really liked using it.</p>
+<p>I used to use Wordpress for a book review blog I had, but decided to move away from it mostly because:</p>
+<ol>
+<li>Theming on Wordpress is a bigger mess than its worth</li>
+<li>Wordpress can be super slow sometimes, static site frameworks are light-weight</li>
+<li>With Hexo I own everything end-to-end</li>
+</ol>
+<p>Despite my love for Hexo, there’s a few things that have bothered me about the workflow. So I wrote some simple scripts to make my work easier and I thought I’d share:</p>
+<h2 id="Deleting-published-posts"><a href="#Deleting-published-posts" class="headerlink" title="Deleting published posts"></a>Deleting published posts</h2><p>Most of Hexo is controlled using terminal commands. You can create drafts, publish posts, deploy your site etc. A full list of the commands can be found <a href="https://hexo.io/docs/commands" target="_blank" rel="noopener">here</a>.</p>
+<p>But what always frustrated me was that there was no explicit command to delete a post once it’s been published. I expect it’s so you can’t easily delete something you wanted to keep live. Either way, I created a tiny bash script so that you can do that.</p>
+<p><a href="https://gist.github.com/jtloong/60d4449eb45e0c7104264f082cf75058" target="_blank" rel="noopener">I’ve uploaded it to Gist</a> but you can see the script here:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">POST_DIR=<span class="built_in">source</span>/_posts/</span><br><span class="line"></span><br><span class="line">rm <span class="variable">$POST_DIR</span><span class="variable">$1</span>.md</span><br><span class="line">rmdir <span class="variable">$POST_DIR</span><span class="variable">$1</span>/</span><br><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<p>All you need to do it is put it in the root of your Hexo project and call the command <code>bash hexo_delete_post.sh file_name</code> where file_name is without the file extension (ie .md)</p>
+<h2 id="Moving-published-post-back-to-drafts"><a href="#Moving-published-post-back-to-drafts" class="headerlink" title="Moving published post back to drafts"></a>Moving published post back to drafts</h2><p>One thing I always like to do is visualize what my post is going to look like when it’s live on the site. Good thing with Hexo is that you can generate and serve your blog locally to see it before it goes live.</p>
+<p>BUT the only way to do that is to publish your draft. All changes will remain local until its deployed to your live site, but sometimes I want to work on a post, look at it, and then stash it away.</p>
+<p>So I wrote the following script to move published posts back to drafts. The Gist can be found <a href="https://gist.github.com/jtloong/fe74c26f0efc5be7d407ef78d34c7609" target="_blank" rel="noopener">here</a>.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">POST_DIR=<span class="built_in">source</span>/_posts/</span><br><span class="line">DRAFT_DIR=<span class="built_in">source</span>/_drafts/</span><br><span class="line"></span><br><span class="line">mv <span class="variable">$POST_DIR</span><span class="variable">$1</span>.md <span class="variable">$DRAFT_DIR</span></span><br><span class="line">mv <span class="variable">$POST_DIR</span><span class="variable">$1</span>/ <span class="variable">$DRAFT_DIR</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<p>The instructions are the same as the last script: put this in the root of your Hexo project and call the command <code>bash move_to_draft.sh file_name</code> where file_name is without the file extension (ie .md)</p>
+<h2 id="Thanks-for-reading"><a href="#Thanks-for-reading" class="headerlink" title="Thanks for reading!"></a>Thanks for reading!</h2><p>Hope that helps you fellow Hexo users out there. I know this is relatively simple stuff but it might help someone so I figured I’d write about it.</p>
+<p>Since Hexo is open source I might eventually get around to contributing some functions to make this built in. But until I have time, this will have to do for now.</p>
+
+  </div>
+</article>
+
+
+
+<div class="talkyard-comments" data-discussion-id="" style="margin-top: 45px;">
+<noscript>Please enable Javascript to view comments.</noscript>
+<p style="margin-top: 25px; opacity: 0.9; font-size: 96%">Comments powered by
+<a href="https://www.talkyard.io">Talkyard</a>.</p>
+</div>
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Deleting-published-posts"><span class="toc-number">1.</span> <span class="toc-text">Deleting published posts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Moving-published-post-back-to-drafts"><span class="toc-number">2.</span> <span class="toc-text">Moving published post back to drafts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thanks-for-reading"><span class="toc-number">3.</span> <span class="toc-text">Thanks for reading!</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&text=Improving My Hexo Blogging Workflow"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&title=Improving My Hexo Blogging Workflow"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&is_video=false&description=Improving My Hexo Blogging Workflow"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Improving My Hexo Blogging Workflow&body=Check out this article: http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&title=Improving My Hexo Blogging Workflow"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&title=Improving My Hexo Blogging Workflow"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&title=Improving My Hexo Blogging Workflow"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&title=Improving My Hexo Blogging Workflow"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/&name=Improving My Hexo Blogging Workflow&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$("#toc-footer").toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$("#share-footer").toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$("#nav-footer").toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2021 Joshua Loong
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery.timeliny@1.0.1/dist/jquery.timeliny.min.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="../../../../lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../../lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="../../../../lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="../../../../lib/jquery/jquery.min.js"></script>
+<script src="../../../../lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="../../../../lib/timeliny/jquery.timeliny.js"></script>
+<script src="../../../../js/main.js"></script>
+
+<script>talkyardServerUrl='https://comments-for-joshualoong-com.talkyard.net';</script>
+<script async defer src="https://c1.ty-cdn.net/-/talkyard-comments.min.js"></script>
+
+<script>
+var url = window.location.pathname.split("/")[1];
+
+if (url == 'tags'){
+    elems = document.getElementsByClassName("non-categorized-posts");
+    for (var i=0;i<elems.length;i+=1){
+        elems[i].style.display = 'none';
+    }
+}
+</script>
+
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+

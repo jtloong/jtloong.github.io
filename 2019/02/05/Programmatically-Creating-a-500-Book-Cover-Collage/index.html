@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112023430-1"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112023430-1');
+    </script>
+
+    <meta name="description" content="For the past few years, I’ve really gotten back into reading after a long hiatus. I used to be a voracious reader as a kid, but a long the way I got busy (swimming a ridiculous number of hours a week">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Programmatically Creating a 500 Book Cover Collage">
+<meta property="og:url" content="http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/index.html">
+<meta property="og:site_name" content="Joshua Loong">
+<meta property="og:description" content="For the past few years, I’ve really gotten back into reading after a long hiatus. I used to be a voracious reader as a kid, but a long the way I got busy (swimming a ridiculous number of hours a week">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/collage.png">
+<meta property="og:image" content="http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/collage.png">
+<meta property="og:updated_time" content="2019-02-05T16:23:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Programmatically Creating a 500 Book Cover Collage">
+<meta name="twitter:description" content="For the past few years, I’ve really gotten back into reading after a long hiatus. I used to be a voracious reader as a kid, but a long the way I got busy (swimming a ridiculous number of hours a week">
+<meta name="twitter:image" content="http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/collage.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../../../../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../../../../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Programmatically Creating a 500 Book Cover Collage</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/jquery.timeliny.css">
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="../../../../atom.xml" title="Joshua Loong" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+</head>
+
+<body>
+    
+      <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../../../03/01/Finding-the-Most-Published-Author-in-the-New-Yorker/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$("#i-prev").toggle();" onmouseout="$("#i-prev").toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../../../../2018/10/22/Custom-Git-Commands-Making-Git-Status-Size/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$("#i-next").toggle();" onmouseout="$("#i-next").toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$("#i-top").toggle();" onmouseout="$("#i-top").toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$("#i-share").toggle();" onmouseout="$("#i-share").toggle();" onclick="$("#share").toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&text=Programmatically Creating a 500 Book Cover Collage"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&title=Programmatically Creating a 500 Book Cover Collage"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&is_video=false&description=Programmatically Creating a 500 Book Cover Collage"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Programmatically Creating a 500 Book Cover Collage&body=Check out this article: http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&title=Programmatically Creating a 500 Book Cover Collage"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&title=Programmatically Creating a 500 Book Cover Collage"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&title=Programmatically Creating a 500 Book Cover Collage"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&title=Programmatically Creating a 500 Book Cover Collage"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&name=Programmatically Creating a 500 Book Cover Collage&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Playing-Around-With-a-Lifetime-Library"><span class="toc-number">1.</span> <span class="toc-text">Playing Around With a Lifetime Library</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Steps"><span class="toc-number">1.1.</span> <span class="toc-text">Steps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Retrieving-Links"><span class="toc-number">1.2.</span> <span class="toc-text">Retrieving Links</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Downloading-the-Images"><span class="toc-number">1.3.</span> <span class="toc-text">Downloading the Images</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Creating-a-Collage"><span class="toc-number">1.4.</span> <span class="toc-text">Creating a Collage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Final-Thoughts"><span class="toc-number">2.</span> <span class="toc-text">Final Thoughts</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Programmatically Creating a 500 Book Cover Collage
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">Joshua Loong</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2019-02-05T19:23:21.000Z" itemprop="datePublished">2019-02-05</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <img src="/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/collage.png">
+<p>For the past few years, I’ve really gotten back into reading after a long hiatus. I used to be a voracious reader as a kid, but a long the way I got busy (swimming a ridiculous number of hours a week) and I just stopped.</p>
+<p>But a bit more than three years ago, during the holiday break of 2015, I picked up a book I had got for Christmas. It really captured me in a way a book hadn’t in years. So when I started my co-op term that January I challenged myself to read 20 books that year as part of an office New Year’s resolution competition.</p>
+<p>I ended up reading 70. </p>
+<p>Since then reading and books has become such a big part of my life I’m not sure how I really lived during my hiatus.</p>
+<p>Part of my success at reading has been: setting reading goals, carving out time for it (you have more than you think) and logging books I’ve read religiously. </p>
+<p>I use a popular book cataloguing and social media site called <a href="https://goodreads.com" target="_blank" rel="noopener">Goodreads</a> to do so. It lets you keep track of whether you’re on track to your yearly goals and also lets me keep track of my to read pile (which as of writing sits at a probably insurmountable number of 2240 books but I digress). </p>
+<p>What this did was create a living history of all the books I have been reading in the last few years. </p>
+<p>But then I got curious: what about all the books <strong>before</strong> I started actively cataloguing? What about all the hundreds of books I read as a kid? Could I catalogue them?</p>
+<p>This isn’t something that happened overnight. Over the last year, I began to meticously comb through my parent’s houses for books I remember reading. I remembered back to each year of school and tried to name the books we had read for class. I searched through library catalogues to figure out which ones I remembered.</p>
+<p>In the end, I’m pretty satisified with what I’ve recorded even if I forgot a few I’m pretty sure I’m close to the true number. </p>
+<p>Now my Goodreads is a true life time library with all of my books lined up under one roof.</p>
+<h2 id="Playing-Around-With-a-Lifetime-Library"><a href="#Playing-Around-With-a-Lifetime-Library" class="headerlink" title="Playing Around With a Lifetime Library"></a>Playing Around With a Lifetime Library</h2><p>There’s a number of ways we could play around with this data, so for something fun: could we create a poster of all the book covers I had read?</p>
+<p>With some tinkering I figured it out (the result of which you can see above) but here’s a little guide of how you can too!</p>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><p>There are three components of this once we have your Goodreads library:</p>
+<ol>
+<li>Retrieve all the link locations of all the book covers</li>
+<li>Download all the images to my computer using this list of links</li>
+<li>Make a poster sized collage of these images</li>
+</ol>
+<h3 id="Retrieving-Links"><a href="#Retrieving-Links" class="headerlink" title="Retrieving Links"></a>Retrieving Links</h3><p>There’s a number of ways I could have done this, the most complex but robust way would be to create a Selenium bot to extract the links. A regular scraping method like Beautiful Soup wouldn’t have worked given that viewing a library in Goodreads is different when you’re not logged in and requires keyboard/mouse actions to navigate through. A Selenium scraper would be able to login and manipulate the browser but that seemed like more work than it was worth (although I do love using Selenium).</p>
+<p>What I settled for was a bit hacky, and definitely less automated but still worked great.</p>
+<p>I went to my bookshelf in my browser, turned on infinite scroll and scrolled to the bottom until all the books (and their covers) were loaded into memory.</p>
+<p>Then I opened my developer tools and ran this tiny script in the console:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cover_elements = <span class="built_in">document</span>.querySelectorAll(<span class="string">'*[id^="cover_review"]'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> links = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; cover_links.length; i++)&#123;</span><br><span class="line">    links.push(cover_links[i].src);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(links)</span><br></pre></td></tr></table></figure>
+<p>This printed out each indivudal link to all of the covers of the books in my library. I then just copied this output and placed it into a text file.</p>
+<p>(Like I said hacky, but it works).</p>
+<h3 id="Downloading-the-Images"><a href="#Downloading-the-Images" class="headerlink" title="Downloading the Images"></a>Downloading the Images</h3><p>Now that I had a list of files, it was pretty simple to download them using Python and the <code>urllib.request</code> package in the standard library. </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request <span class="keyword">as</span> ur </span><br><span class="line"></span><br><span class="line">raw_output = open(<span class="string">"links.txt"</span>,<span class="string">"r+"</span>).read()</span><br><span class="line">raw_output = raw_output[<span class="number">1</span>:<span class="number">-1</span>].split(<span class="string">'"'</span>)</span><br><span class="line"></span><br><span class="line">links = [i <span class="keyword">for</span> i <span class="keyword">in</span> raw_output <span class="keyword">if</span> i[:<span class="number">5</span>] == <span class="string">'https'</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i, link <span class="keyword">in</span> enumerate(links):</span><br><span class="line">  image = ur.urlopen(link)</span><br><span class="line">  output = open(<span class="string">"images/book"</span> + str(i) + <span class="string">".jpg"</span>,<span class="string">"wb"</span>)</span><br><span class="line">  output.write(image.read())</span><br><span class="line">  output.close()</span><br></pre></td></tr></table></figure>
+<p>My download took a bit longer since I had over 500 books in my library but it should be decently quick.</p>
+<h3 id="Creating-a-Collage"><a href="#Creating-a-Collage" class="headerlink" title="Creating a Collage"></a>Creating a Collage</h3><p>So I spent some time googling on how to make a collage of hundreds of photos. Obviously most regular online collage services wouldn’t want you uploading hundreds of photos. I did find some really sketchy desktop software that claimed to do it but I didn’t want to go that route. I <em>definitely</em> didn’t want to try it manually. I figured there must be a way to do it programmatically.</p>
+<p>With some digging, I found an actually really simple way to do something like this.</p>
+<p>Open CV is an open source computer vision library that has a Python interface. Neccessary for many machine vision tasks is loading image data into a matrix, and so it comes with a great little function called <code>imread()</code>. </p>
+<p>So for example, I could load an image like so:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">image = cv2.imread(<span class="string">'images/book15.jpg'</span>, <span class="number">1</span>)</span><br><span class="line">print(image)</span><br></pre></td></tr></table></figure>
+<p>The output would be:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[[[201 204 208]</span><br><span class="line">  [201 204 208]</span><br><span class="line">  [200 203 207]</span><br><span class="line">  ...</span><br><span class="line">  [138 142 143]</span><br><span class="line">  [139 141 142]</span><br><span class="line">  [137 139 140]]</span><br><span class="line"></span><br><span class="line"> [[201 204 208]</span><br><span class="line">  [201 204 208]</span><br><span class="line">  [200 203 207]</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+<p>Knowing that just each photo could be loaded in as a matrix, I could easily stack both horizontally and vertically all of the matrix forms of each image until I got one big collage.</p>
+<p>Looping through all of the photos in the folder, loading each into a numpy matrix, then using <code>np.hstack()</code> or <code>np.vstack()</code> I ended up with an awesome poster!</p>
+<p>The final result is below:</p>
+<img src="/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/collage.png">
+<p>You can find all my code <a href="https://github.com/jtloong/blog_projects/tree/master/goodreads_collage" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="Final-Thoughts"><a href="#Final-Thoughts" class="headerlink" title="Final Thoughts"></a>Final Thoughts</h2><p>I showed a few friends this, and someone suggested I build a web app for other Goodreads users to make their own posters which I might do eventually (if I figure out a less hacky way to retrieve the cover links).</p>
+<p>Another thought I had was that when I hit 1000 books read I should download higher definition book covers and print out a poster to put up on my wall. That would be pretty awesome. </p>
+<p>Anyway, you can let me know what you think on Twitter <a href="https://twitter.com/jtloong" target="_blank" rel="noopener">@jtloong</a> or at <a href="mailto:joshua.t.loong@gmail.com" target="_blank" rel="noopener">joshua.t.loong@gmail.com</a></p>
+
+  </div>
+</article>
+
+
+
+<div class="talkyard-comments" data-discussion-id="" style="margin-top: 45px;">
+<noscript>Please enable Javascript to view comments.</noscript>
+<p style="margin-top: 25px; opacity: 0.9; font-size: 96%">Comments powered by
+<a href="https://www.talkyard.io">Talkyard</a>.</p>
+</div>
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Playing-Around-With-a-Lifetime-Library"><span class="toc-number">1.</span> <span class="toc-text">Playing Around With a Lifetime Library</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Steps"><span class="toc-number">1.1.</span> <span class="toc-text">Steps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Retrieving-Links"><span class="toc-number">1.2.</span> <span class="toc-text">Retrieving Links</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Downloading-the-Images"><span class="toc-number">1.3.</span> <span class="toc-text">Downloading the Images</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Creating-a-Collage"><span class="toc-number">1.4.</span> <span class="toc-text">Creating a Collage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Final-Thoughts"><span class="toc-number">2.</span> <span class="toc-text">Final Thoughts</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&text=Programmatically Creating a 500 Book Cover Collage"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&title=Programmatically Creating a 500 Book Cover Collage"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&is_video=false&description=Programmatically Creating a 500 Book Cover Collage"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Programmatically Creating a 500 Book Cover Collage&body=Check out this article: http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&title=Programmatically Creating a 500 Book Cover Collage"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&title=Programmatically Creating a 500 Book Cover Collage"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&title=Programmatically Creating a 500 Book Cover Collage"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&title=Programmatically Creating a 500 Book Cover Collage"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/&name=Programmatically Creating a 500 Book Cover Collage&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$("#toc-footer").toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$("#share-footer").toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$("#nav-footer").toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2021 Joshua Loong
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery.timeliny@1.0.1/dist/jquery.timeliny.min.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="../../../../lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../../lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="../../../../lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="../../../../lib/jquery/jquery.min.js"></script>
+<script src="../../../../lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="../../../../lib/timeliny/jquery.timeliny.js"></script>
+<script src="../../../../js/main.js"></script>
+
+<script>talkyardServerUrl='https://comments-for-joshualoong-com.talkyard.net';</script>
+<script async defer src="https://c1.ty-cdn.net/-/talkyard-comments.min.js"></script>
+
+<script>
+var url = window.location.pathname.split("/")[1];
+
+if (url == 'tags'){
+    elems = document.getElementsByClassName("non-categorized-posts");
+    for (var i=0;i<elems.length;i+=1){
+        elems[i].style.display = 'none';
+    }
+}
+</script>
+
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+

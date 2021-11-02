@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112023430-1"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112023430-1');
+    </script>
+
+    <meta name="description" content="My first real foray into programming was building web sites and applications for the Ministry of Advanced Education and Skills Development. Before that I had dabbled in VB/VBA scripts/macros and done">
+<meta name="keywords" content="software-development">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Making PDF-Join">
+<meta property="og:url" content="http://joshualoong.com/2017/12/22/Making-PDF-Join/index.html">
+<meta property="og:site_name" content="Joshua Loong">
+<meta property="og:description" content="My first real foray into programming was building web sites and applications for the Ministry of Advanced Education and Skills Development. Before that I had dabbled in VB/VBA scripts/macros and done">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://joshualoong.com/2017/12/22/Making-PDF-Join/pdf-join.png">
+<meta property="og:updated_time" content="2019-01-28T13:49:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Making PDF-Join">
+<meta name="twitter:description" content="My first real foray into programming was building web sites and applications for the Ministry of Advanced Education and Skills Development. Before that I had dabbled in VB/VBA scripts/macros and done">
+<meta name="twitter:image" content="http://joshualoong.com/2017/12/22/Making-PDF-Join/pdf-join.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../../../../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../../../../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Making PDF-Join</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/jquery.timeliny.css">
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="../../../../atom.xml" title="Joshua Loong" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+</head>
+
+<body>
+    
+      <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../../../../2018/01/03/Macroeconomic-Effects-of-Canada-s-Miniumum-Wage-Increases/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$("#i-prev").toggle();" onmouseout="$("#i-prev").toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../../../11/27/Review-The-Nordic-Model/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$("#i-next").toggle();" onmouseout="$("#i-next").toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$("#i-top").toggle();" onmouseout="$("#i-top").toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$("#i-share").toggle();" onmouseout="$("#i-share").toggle();" onclick="$("#share").toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://joshualoong.com/2017/12/22/Making-PDF-Join/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&text=Making PDF-Join"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&title=Making PDF-Join"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&is_video=false&description=Making PDF-Join"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Making PDF-Join&body=Check out this article: http://joshualoong.com/2017/12/22/Making-PDF-Join/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&title=Making PDF-Join"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&title=Making PDF-Join"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&title=Making PDF-Join"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&title=Making PDF-Join"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&name=Making PDF-Join&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#My-Idea"><span class="toc-number">1.</span> <span class="toc-text">My Idea</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Results"><span class="toc-number">2.</span> <span class="toc-text">Results</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Making PDF-Join
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">Joshua Loong</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-12-22T05:00:00.000Z" itemprop="datePublished">2017-12-22</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="../../../../tags/software-development/">software-development</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <img src="/2017/12/22/Making-PDF-Join/pdf-join.png">
+<p>My first <strong>real</strong> foray into programming was building web sites and applications for the Ministry of Advanced Education and Skills Development. Before that I had dabbled in VB/VBA scripts/macros and done a few course in Java programming in high school, but I had never truly committed to the art of programming. Building things for the web really opened my eyes to how much fun coding could  be.</p>
+<p>And while I still really enjoy web development, my real interest now lies with data science. So with this in mind, I’ve been learning as much as I can in all aspects of the field.</p>
+<p>From some of the podcasts and online discussions I consume in my spare time, I’ve become more aware that data science isn’t just about doing research and finding results. In some organizations data science teams are building pipelines and applications that feed data/information to the rest of the business. And one of the favourites for doing this is with the microframework <a href="http://flask.pocoo.org/" target="_blank" rel="noopener">Flask</a>.</p>
+<p>Flask is a powerful, light-weight web framework and that allows anyone to build web backends / APIs in Python. With the language being a favourite among many data scientists, Flask has become a real asset to many people’s work flow.</p>
+<p>Knowing this, I set out to learn my way around the framework and build something with it.</p>
+<h2 id="My-Idea"><a href="#My-Idea" class="headerlink" title="My Idea"></a>My Idea</h2><p>My idea for this web app started with a school project. In my Fall 2017 term at UWaterloo, I took a course called ‘Applied Wetland Science’ where I learned about the science behind building wetlands and the scientific/policy implications surrounding it. In our final paper, my group had to attach two documents together: one of which was a large pdf form. Adobe Acrobat let’s you do this but you need to have the paid edition, and many of the online tools combine way too much functionality or look slightly unscrupulous.</p>
+<p>While googling, I stumbled upon this fantastic Python library called <a href="https://github.com/mstamy2/PyPDF2" target="_blank" rel="noopener">PyPDF2</a> which came with all sorts of built in fuctions including the ability to merge pdf documents. With my interest in implementing my new knowledge of Flask, I knew I had to build something.</p>
+<p>I needed a dead simple to use, free, non-add web app that did exactly what you needed to do: join multiple pdf documents together. And so I made it.</p>
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p>Here it is: <a href="http://pdf-join.com" target="_blank" rel="noopener">http://pdf-join.com</a></p>
+<p>It’s a simple site with three routes: an index, an uploader, and a merge/downloader. All the front end is made with a jinja2 templates (which is Flask’s default templating engine) and with custom CSS.</p>
+<p>Playing around with Flask’s uploading functionality I made a really barebones version that uploaded and wrote files to a folder in the root directory of the app. However, I figured I might try using an actual database to store all my information for security reasons and honestly just to practice. For this I utilized SQLite which is great to use with Flask and I didn’t need a dedicated server to host the database. On each database insertion I gave a visitor a unqiue ID (written to a cookie), the time of writing, and stored the pdf file as a blob binary.</p>
+<p>Using the visitor ID cookie, the merge function could retrieve the users pdf binaries with a simple select statement, using PyPDF2 library to merge it, and sent the written file back to the user. All through Flask!</p>
+<p>I used Heroku’s free tier to host it, and after many deploys which managed to crash for varying reasons I got it working!</p>
+<p>Overal, I think it really brought together some of my previous work in web development with some of my new data science skills. It was actually a blast to get something like this working, hopefully in my upcoming job I can put these skills to work!</p>
+
+  </div>
+</article>
+
+
+
+<div class="talkyard-comments" data-discussion-id="" style="margin-top: 45px;">
+<noscript>Please enable Javascript to view comments.</noscript>
+<p style="margin-top: 25px; opacity: 0.9; font-size: 96%">Comments powered by
+<a href="https://www.talkyard.io">Talkyard</a>.</p>
+</div>
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#My-Idea"><span class="toc-number">1.</span> <span class="toc-text">My Idea</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Results"><span class="toc-number">2.</span> <span class="toc-text">Results</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://joshualoong.com/2017/12/22/Making-PDF-Join/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&text=Making PDF-Join"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&title=Making PDF-Join"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&is_video=false&description=Making PDF-Join"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Making PDF-Join&body=Check out this article: http://joshualoong.com/2017/12/22/Making-PDF-Join/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&title=Making PDF-Join"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&title=Making PDF-Join"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&title=Making PDF-Join"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&title=Making PDF-Join"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://joshualoong.com/2017/12/22/Making-PDF-Join/&name=Making PDF-Join&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$("#toc-footer").toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$("#share-footer").toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$("#nav-footer").toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2021 Joshua Loong
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery.timeliny@1.0.1/dist/jquery.timeliny.min.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="../../../../lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../../lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="../../../../lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="../../../../lib/jquery/jquery.min.js"></script>
+<script src="../../../../lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="../../../../lib/timeliny/jquery.timeliny.js"></script>
+<script src="../../../../js/main.js"></script>
+
+<script>talkyardServerUrl='https://comments-for-joshualoong-com.talkyard.net';</script>
+<script async defer src="https://c1.ty-cdn.net/-/talkyard-comments.min.js"></script>
+
+<script>
+var url = window.location.pathname.split("/")[1];
+
+if (url == 'tags'){
+    elems = document.getElementsByClassName("non-categorized-posts");
+    for (var i=0;i<elems.length;i+=1){
+        elems[i].style.display = 'none';
+    }
+}
+</script>
+
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+

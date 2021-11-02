@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Joshua Loong</title>
+  
+  <subtitle>Joshua Loong</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://joshualoong.com/"/>
+  <updated>2020-10-18T19:00:25.000Z</updated>
+  <id>http://joshualoong.com/</id>
+  
+  <author>
+    <name>Joshua Loong</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Journal Article: In The Blink of an Eye - Reading Mental States From Briefly Presented Eye Regions</title>
+    <link href="http://joshualoong.com/2020/10/18/In-The-Blink-of-an-Eye/"/>
+    <id>http://joshualoong.com/2020/10/18/In-The-Blink-of-an-Eye/</id>
+    <published>2020-10-18T18:54:45.000Z</published>
+    <updated>2020-10-18T19:00:25.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;An article I’ve been supporting has finally been published in I-Perception! &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Gunnar Schmidtmann, Joshua
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Books Read in 2019</title>
+    <link href="http://joshualoong.com/2020/01/08/Books-Read-in-2019/"/>
+    <id>http://joshualoong.com/2020/01/08/Books-Read-in-2019/</id>
+    <published>2020-01-08T23:00:44.000Z</published>
+    <updated>2020-01-08T20:00:46.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2020/01/08/Books-Read-in-2019/books.jpg&quot;&gt; 
+&lt;p&gt;It’s that time of year again! I’ve been doing these yearly summaries of my reading
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Appreciating R: The Ease of Testing Linear Model Assumptions</title>
+    <link href="http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/"/>
+    <id>http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/</id>
+    <published>2019-09-20T21:16:30.000Z</published>
+    <updated>2019-09-23T15:48:16.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/regression.png&quot;&gt;
+&lt;p&gt;I’d always heard about the package
+        
+      
+    
+    </summary>
+    
+    
+      <category term="data-science" scheme="http://joshualoong.com/tags/data-science/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The Favourite Books of Almost 200 Students in Georgia</title>
+    <link href="http://joshualoong.com/2019/05/25/The-Favourite-Books-of-Almost-200-Students-in-Georgia/"/>
+    <id>http://joshualoong.com/2019/05/25/The-Favourite-Books-of-Almost-200-Students-in-Georgia/</id>
+    <published>2019-05-25T22:14:01.000Z</published>
+    <updated>2019-05-25T19:15:25.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2019/05/25/The-Favourite-Books-of-Almost-200-Students-in-Georgia/poster.jpg&quot;&gt;
+&lt;p&gt;A few months ago I posted online about a custom
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Preprint: Temporal processing of facial expressions of mental states</title>
+    <link href="http://joshualoong.com/2019/04/10/Preprint-Temporal-processing-of-facial-expressions-of-mental-states/"/>
+    <id>http://joshualoong.com/2019/04/10/Preprint-Temporal-processing-of-facial-expressions-of-mental-states/</id>
+    <published>2019-04-10T19:57:06.000Z</published>
+    <updated>2019-04-10T16:57:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;I got the pleasure of working with a small team of researchers on trying to understand human emotion recognition. And specifically the
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Finding the Most Published Author in the New Yorker</title>
+    <link href="http://joshualoong.com/2019/03/01/Finding-the-Most-Published-Author-in-the-New-Yorker/"/>
+    <id>http://joshualoong.com/2019/03/01/Finding-the-Most-Published-Author-in-the-New-Yorker/</id>
+    <published>2019-03-01T05:10:21.000Z</published>
+    <updated>2019-03-02T15:12:10.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2019/03/01/Finding-the-Most-Published-Author-in-the-New-Yorker/cover.png&quot;&gt;
+&lt;p&gt;The New Yorker is one of the most prominent
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Programmatically Creating a 500 Book Cover Collage</title>
+    <link href="http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/"/>
+    <id>http://joshualoong.com/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/</id>
+    <published>2019-02-05T19:23:21.000Z</published>
+    <updated>2019-02-05T16:23:22.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2019/02/05/Programmatically-Creating-a-500-Book-Cover-Collage/collage.png&quot;&gt;
+&lt;p&gt;For the past few years, I’ve really gotten back
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Custom Git Commands - Making Git-Status-Size</title>
+    <link href="http://joshualoong.com/2018/10/22/Custom-Git-Commands-Making-Git-Status-Size/"/>
+    <id>http://joshualoong.com/2018/10/22/Custom-Git-Commands-Making-Git-Status-Size/</id>
+    <published>2018-10-22T04:00:00.000Z</published>
+    <updated>2019-03-05T19:54:59.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2018/10/22/Custom-Git-Commands-Making-Git-Status-Size/example.gif&quot;&gt;
+&lt;p&gt;Sometimes you find a task that seriously disrupts your
+        
+      
+    
+    </summary>
+    
+    
+      <category term="software-development" scheme="http://joshualoong.com/tags/software-development/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fitting Polynomial Regressions in Python</title>
+    <link href="http://joshualoong.com/2018/10/03/Fitting-Polynomial-Regressions-in-Python/"/>
+    <id>http://joshualoong.com/2018/10/03/Fitting-Polynomial-Regressions-in-Python/</id>
+    <published>2018-10-03T04:00:00.000Z</published>
+    <updated>2019-09-09T17:33:40.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2018/10/03/Fitting-Polynomial-Regressions-in-Python/example.png&quot;&gt;
+&lt;p&gt;The linear regression is one of the first things you do in
+        
+      
+    
+    </summary>
+    
+    
+      <category term="data-science" scheme="http://joshualoong.com/tags/data-science/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bank Services for Community Projects</title>
+    <link href="http://joshualoong.com/2018/09/24/Bank-Services-for-Community-Projects/"/>
+    <id>http://joshualoong.com/2018/09/24/Bank-Services-for-Community-Projects/</id>
+    <published>2018-09-24T04:00:00.000Z</published>
+    <updated>2019-03-05T19:55:57.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2018/09/24/Bank-Services-for-Community-Projects/civic_tech.png&quot;&gt;
+&lt;p&gt;I’ve been a semi-regular attendee of the &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="civic-action" scheme="http://joshualoong.com/tags/civic-action/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Improving My Hexo Blogging Workflow</title>
+    <link href="http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/"/>
+    <id>http://joshualoong.com/2018/07/30/Improving-My-Hexo-Blogging-Workflow/</id>
+    <published>2018-07-30T04:00:00.000Z</published>
+    <updated>2019-01-28T13:49:16.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2018/07/30/Improving-My-Hexo-Blogging-Workflow/hexo.png&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="software-development" scheme="http://joshualoong.com/tags/software-development/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Topic Modeling Song Lyrics - An Exploration in Unsupervised Text Analytics</title>
+    <link href="http://joshualoong.com/2018/07/03/Topic-Modelling-Song-Lyrics-An-Exploration-in-Unsupervised-Text-Analytics/"/>
+    <id>http://joshualoong.com/2018/07/03/Topic-Modelling-Song-Lyrics-An-Exploration-in-Unsupervised-Text-Analytics/</id>
+    <published>2018-07-03T04:00:00.000Z</published>
+    <updated>2021-10-18T00:41:31.979Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+&lt;p&gt;For most of my professional and hobby experience in data science, I haven’t ventured too far into text analytics. Having some more time
+        
+      
+    
+    </summary>
+    
+    
+      <category term="data-science" scheme="http://joshualoong.com/tags/data-science/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ontario Municipal per Capita Transit Spending</title>
+    <link href="http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/"/>
+    <id>http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/</id>
+    <published>2018-03-27T04:00:00.000Z</published>
+    <updated>2019-01-28T13:49:15.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/yrt.JPG&quot;&gt;
+&lt;p&gt;Municipal transit is a hot button issue these days,
+        
+      
+    
+    </summary>
+    
+    
+      <category term="public-policy" scheme="http://joshualoong.com/tags/public-policy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Getting Started With Local Open edX Development</title>
+    <link href="http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/"/>
+    <id>http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/</id>
+    <published>2018-03-22T04:00:00.000Z</published>
+    <updated>2019-03-05T19:59:47.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2018/03/22/Getting-Started-With-Open-edX-Development/classroom.jpg&quot;&gt;
+&lt;p&gt;The world of online learning is vast. There are a myriad
+        
+      
+    
+    </summary>
+    
+    
+      <category term="software-development" scheme="http://joshualoong.com/tags/software-development/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The Values Behind Chalmers Cards</title>
+    <link href="http://joshualoong.com/2018/03/01/The-Values-Behind-Chalmers-Cards/"/>
+    <id>http://joshualoong.com/2018/03/01/The-Values-Behind-Chalmers-Cards/</id>
+    <published>2018-03-01T05:00:00.000Z</published>
+    <updated>2019-01-28T13:49:15.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2018/03/01/The-Values-Behind-Chalmers-Cards/designs.jpg&quot;&gt;
+&lt;p&gt;So we’ve been working away at Chalmers Cards. Thanks for all the
+        
+      
+    
+    </summary>
+    
+    
+      <category term="civic-action" scheme="http://joshualoong.com/tags/civic-action/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Using Civic Tech to Combat the Homelessness Crisis in Toronto</title>
+    <link href="http://joshualoong.com/2018/02/07/Using-Civic-Tech-to-Combat-the-Homelessness-Crisis-in-Toronto/"/>
+    <id>http://joshualoong.com/2018/02/07/Using-Civic-Tech-to-Combat-the-Homelessness-Crisis-in-Toronto/</id>
+    <published>2018-02-07T05:00:00.000Z</published>
+    <updated>2019-02-10T23:22:31.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2018/02/07/Using-Civic-Tech-to-Combat-the-Homelessness-Crisis-in-Toronto/homeless.jpeg&quot;&gt;
+&lt;p&gt;Homelessness in this city, and
+        
+      
+    
+    </summary>
+    
+    
+      <category term="civic-action" scheme="http://joshualoong.com/tags/civic-action/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Applying the Bradford Hill Criteria to Economics and Policy</title>
+    <link href="http://joshualoong.com/2018/01/25/Applying-the-Bradford-Hill-Criteria-to-Economics-and-Policy/"/>
+    <id>http://joshualoong.com/2018/01/25/Applying-the-Bradford-Hill-Criteria-to-Economics-and-Policy/</id>
+    <published>2018-01-25T05:00:00.000Z</published>
+    <updated>2019-01-28T13:49:15.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2018/01/25/Applying-the-Bradford-Hill-Criteria-to-Economics-and-Policy/Austin_Bradford_Hill.jpg&quot;&gt;
+&lt;p&gt;Sir Austin Bradford Hill
+        
+      
+    
+    </summary>
+    
+    
+      <category term="public-policy" scheme="http://joshualoong.com/tags/public-policy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Digital Marketing in the Public Policy Space</title>
+    <link href="http://joshualoong.com/2018/01/21/Digital-Marketing-in-the-Public-Policy-Space/"/>
+    <id>http://joshualoong.com/2018/01/21/Digital-Marketing-in-the-Public-Policy-Space/</id>
+    <published>2018-01-21T05:00:00.000Z</published>
+    <updated>2019-01-28T13:49:14.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;img src=&quot;/2018/01/21/Digital-Marketing-in-the-Public-Policy-Space/leg-ON.jpg&quot;&gt;
+&lt;p&gt;In the previous dark ages of marketing and advertising
+        
+      
+    
+    </summary>
+    
+    
+      <category term="public-policy" scheme="http://joshualoong.com/tags/public-policy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Is an Internet Forum for Public Policy Possible?</title>
+    <link href="http://joshualoong.com/2018/01/12/Is-an-Internet-Forum-for-Public-Policy-Possible/"/>
+    <id>http://joshualoong.com/2018/01/12/Is-an-Internet-Forum-for-Public-Policy-Possible/</id>
+    <published>2018-01-12T05:00:00.000Z</published>
+    <updated>2019-01-28T13:49:14.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;As most of you that know me are aware, I love political science and public policy. My whole career has been spent doing work in the
+        
+      
+    
+    </summary>
+    
+    
+      <category term="public-policy" scheme="http://joshualoong.com/tags/public-policy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Building the Python chow_test Package</title>
+    <link href="http://joshualoong.com/2018/01/05/Building-the-Python-chow-test-Package/"/>
+    <id>http://joshualoong.com/2018/01/05/Building-the-Python-chow-test-Package/</id>
+    <published>2018-01-05T05:00:00.000Z</published>
+    <updated>2019-03-05T20:02:07.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;In my spare time I like to do online courses. Some of them are free, like the ones on &lt;a href=&quot;https://www.coursera.org/&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="data-science" scheme="http://joshualoong.com/tags/data-science/"/>
+    
+  </entry>
+  
+</feed>

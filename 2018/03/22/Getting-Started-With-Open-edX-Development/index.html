@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112023430-1"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112023430-1');
+    </script>
+
+    <meta name="description" content="The world of online learning is vast. There are a myriad of options available for the prospective client wishing to distribute training/education. Many of them paid, some of them free, all of them ha">
+<meta name="keywords" content="software-development">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Getting Started With Local Open edX Development">
+<meta property="og:url" content="http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/index.html">
+<meta property="og:site_name" content="Joshua Loong">
+<meta property="og:description" content="The world of online learning is vast. There are a myriad of options available for the prospective client wishing to distribute training/education. Many of them paid, some of them free, all of them ha">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/classroom.jpg">
+<meta property="og:updated_time" content="2019-03-05T19:59:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Getting Started With Local Open edX Development">
+<meta name="twitter:description" content="The world of online learning is vast. There are a myriad of options available for the prospective client wishing to distribute training/education. Many of them paid, some of them free, all of them ha">
+<meta name="twitter:image" content="http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/classroom.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../../../../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../../../../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Getting Started With Local Open edX Development</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/jquery.timeliny.css">
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="../../../../atom.xml" title="Joshua Loong" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+</head>
+
+<body>
+    
+      <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../../27/Ontario-Municipal-per-Capita-Transit-Spending/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$("#i-prev").toggle();" onmouseout="$("#i-prev").toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../../01/The-Values-Behind-Chalmers-Cards/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$("#i-next").toggle();" onmouseout="$("#i-next").toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$("#i-top").toggle();" onmouseout="$("#i-top").toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$("#i-share").toggle();" onmouseout="$("#i-share").toggle();" onclick="$("#share").toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&text=Getting Started With Local Open edX Development"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&title=Getting Started With Local Open edX Development"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&is_video=false&description=Getting Started With Local Open edX Development"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Getting Started With Local Open edX Development&body=Check out this article: http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&title=Getting Started With Local Open edX Development"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&title=Getting Started With Local Open edX Development"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&title=Getting Started With Local Open edX Development"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&title=Getting Started With Local Open edX Development"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&name=Getting Started With Local Open edX Development&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Going-Local"><span class="toc-number">1.</span> <span class="toc-text">Going Local</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installing-Open-edX-a-Dummy’s-Survival-Guide"><span class="toc-number">2.</span> <span class="toc-text">Installing Open edX: a (Dummy’s) Survival Guide</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Actually-Developing"><span class="toc-number">3.</span> <span class="toc-text">Actually Developing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#That’s-It"><span class="toc-number">4.</span> <span class="toc-text">That’s It!</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Getting Started With Local Open edX Development
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">Joshua Loong</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-03-22T04:00:00.000Z" itemprop="datePublished">2018-03-22</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="../../../../tags/software-development/">software-development</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <img src="/2018/03/22/Getting-Started-With-Open-edX-Development/classroom.jpg">
+<p>The world of online learning is vast. There are a myriad of options available for the prospective client wishing to distribute training/education. Many of them paid, some of them free, all of them have their strengths and weaknesses.</p>
+<p>As part of my work at <a href="https://democracykit.org" target="_blank" rel="noopener">Democracy Kit</a>, where I am the tech lead, we’ve begun to dive head first into the crazy realm of MOOC’s. After discussing it we’ve decided, at least for now, to build out a prototype of what a Democracy Kit branded online course platform would look like.</p>
+<p>The current website that we use is great for what we’ve needed for our first year in operation, but now we’re exploring options that give us a bit more flexibility.</p>
+<p>And the platform we’ve chosen to do that is <a href="https://open.edx.org/" target="_blank" rel="noopener">Open edX</a>, a completely open source version of the MOOC software that runs <a href="https://www.edx.org/" target="_blank" rel="noopener">edX</a>. Open edX is built mostly in Django with a MongoDB and MySQL backend, utilizing Django templates and SASS for the frontend.</p>
+<h2 id="Going-Local"><a href="#Going-Local" class="headerlink" title="Going Local"></a>Going Local</h2><p>So a few weeks ago we tried our hand at using it, and before we had even written a single line of code we came at a roadblock.</p>
+<p>The current documentation for setting up a local development environment is a bit confusing. They initially recommend setting up their local dev version of the software using Vagrant and Virtual Box. Both <a href="https://twitter.com/HasanNaseem" target="_blank" rel="noopener">Hasan</a> and I tried it on our computers (one Mac and one Linux machine), and we both ran into huge problems.</p>
+<p>Error after error; all sorts of problems. And not a single line of code had been written yet. Just setting up a dev environment seemed like it was more difficult than we expected.</p>
+<p>It turns out Open edX is currently making a transition from their old local development deployment and using Docker containers. After scratching our heads for a little bit, we found <a href="https://github.com/edx/devstack" target="_blank" rel="noopener">this repo</a> outlining a much more sane way to getting started.</p>
+<p>But even this documentation was confusing, which is why I’m writing this blog post to help teach anyone who wants to start developing with us or to random visitors to my little corner of the web that need help deploying their first Open edX app.</p>
+<h2 id="Installing-Open-edX-a-Dummy’s-Survival-Guide"><a href="#Installing-Open-edX-a-Dummy’s-Survival-Guide" class="headerlink" title="Installing Open edX: a (Dummy’s) Survival Guide"></a>Installing Open edX: a (Dummy’s) Survival Guide</h2><ol>
+<li>Install <a href="https://docs.docker.com/compose/install/" target="_blank" rel="noopener">docker-compose</a></li>
+<li>Make sure you have <strong>make</strong> and <strong>pip</strong> installed</li>
+<li>Install <a href="http://docs.python-guide.org/en/latest/dev/virtualenvs/#lower-level-virtualenv" target="_blank" rel="noopener">virtualenv</a></li>
+<li><p>Clone this repository using:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/democracykit/devstack.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Move into the project folder and create a virtualenv using:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> devstack</span><br><span class="line">virtualenv democracykit</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Then install requirements like so:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make requirements</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>The Docker Compose file mounts a host volume for each service’s executing code by conducting this command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make dev.clone</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Run the provision command to configure the superusers which may take a while (my installation took almost half an hour):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make dev.provision</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Start the services (this may take up to 60 seconds to appear even after all the checks say done):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make dev.up</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>And voila! You should have a version of Open EdX devstack running on your local machine. All of the services are running at the following links:</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Credentials</td>
+<td><a href="http://localhost:18150/api/v2/" target="_blank" rel="noopener">http://localhost:18150/api/v2/</a></td>
+</tr>
+<tr>
+<td>Catalog/Discovery</td>
+<td><a href="http://localhost:18381/api-docs/" target="_blank" rel="noopener">http://localhost:18381/api-docs/</a></td>
+</tr>
+<tr>
+<td>E-Commerce/Otto</td>
+<td><a href="http://localhost:18130/dashboard/" target="_blank" rel="noopener">http://localhost:18130/dashboard/</a></td>
+</tr>
+<tr>
+<td>LMS</td>
+<td><a href="http://localhost:18000/" target="_blank" rel="noopener">http://localhost:18000/</a></td>
+</tr>
+<tr>
+<td>Studio/CMS</td>
+<td><a href="http://localhost:18010/" target="_blank" rel="noopener">http://localhost:18010/</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Once you’re done with working for the day you can stop the services using:<br></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make stop</span><br></pre></td></tr></table></figure>
+<h2 id="Actually-Developing"><a href="#Actually-Developing" class="headerlink" title="Actually Developing"></a>Actually Developing</h2><p>Now you’ve installed a wackload of code and files, and set up your databases. Now to actually develop the frontend you have to navigate this tree of folders.</p>
+<p>Just a tip, all of your frontend code that students will see is under the <code>edx-platform/lms</code> folder. What we’re doing is we’ve setup <a href="https://github.com/democracykit/open-edx-frontend" target="_blank" rel="noopener">a seperate repo</a> that will contain all of our code in this folder. That we can then push and pull code from.</p>
+<h2 id="That’s-It"><a href="#That’s-It" class="headerlink" title="That’s It!"></a>That’s It!</h2><p>I hope this helps simplify your understanding of how to launch your own local environment for Open edX development. I know it seems super confusing and daunting at first, and I hope this helps out anyone who wants to help out on the project or wants to develop their own courses.</p>
+<p>Thanks for reading!</p>
+
+  </div>
+</article>
+
+
+
+<div class="talkyard-comments" data-discussion-id="" style="margin-top: 45px;">
+<noscript>Please enable Javascript to view comments.</noscript>
+<p style="margin-top: 25px; opacity: 0.9; font-size: 96%">Comments powered by
+<a href="https://www.talkyard.io">Talkyard</a>.</p>
+</div>
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Going-Local"><span class="toc-number">1.</span> <span class="toc-text">Going Local</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installing-Open-edX-a-Dummy’s-Survival-Guide"><span class="toc-number">2.</span> <span class="toc-text">Installing Open edX: a (Dummy’s) Survival Guide</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Actually-Developing"><span class="toc-number">3.</span> <span class="toc-text">Actually Developing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#That’s-It"><span class="toc-number">4.</span> <span class="toc-text">That’s It!</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&text=Getting Started With Local Open edX Development"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&title=Getting Started With Local Open edX Development"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&is_video=false&description=Getting Started With Local Open edX Development"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Getting Started With Local Open edX Development&body=Check out this article: http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&title=Getting Started With Local Open edX Development"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&title=Getting Started With Local Open edX Development"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&title=Getting Started With Local Open edX Development"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&title=Getting Started With Local Open edX Development"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://joshualoong.com/2018/03/22/Getting-Started-With-Open-edX-Development/&name=Getting Started With Local Open edX Development&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$("#toc-footer").toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$("#share-footer").toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$("#nav-footer").toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2021 Joshua Loong
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery.timeliny@1.0.1/dist/jquery.timeliny.min.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="../../../../lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../../lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="../../../../lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="../../../../lib/jquery/jquery.min.js"></script>
+<script src="../../../../lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="../../../../lib/timeliny/jquery.timeliny.js"></script>
+<script src="../../../../js/main.js"></script>
+
+<script>talkyardServerUrl='https://comments-for-joshualoong-com.talkyard.net';</script>
+<script async defer src="https://c1.ty-cdn.net/-/talkyard-comments.min.js"></script>
+
+<script>
+var url = window.location.pathname.split("/")[1];
+
+if (url == 'tags'){
+    elems = document.getElementsByClassName("non-categorized-posts");
+    for (var i=0;i<elems.length;i+=1){
+        elems[i].style.display = 'none';
+    }
+}
+</script>
+
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+

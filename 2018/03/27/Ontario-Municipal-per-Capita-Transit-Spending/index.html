@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112023430-1"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112023430-1');
+    </script>
+
+    <meta name="description" content="Municipal transit is a hot button issue these days, especially in Toronto and the GTHA. With issues surrounding funding and expansion being especially pertinent, I’ve always wondered: is there a bett">
+<meta name="keywords" content="public-policy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ontario Municipal per Capita Transit Spending">
+<meta property="og:url" content="http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/index.html">
+<meta property="og:site_name" content="Joshua Loong">
+<meta property="og:description" content="Municipal transit is a hot button issue these days, especially in Toronto and the GTHA. With issues surrounding funding and expansion being especially pertinent, I’ve always wondered: is there a bett">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/yrt.JPG">
+<meta property="og:image" content="http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/chart.png">
+<meta property="og:updated_time" content="2019-01-28T13:49:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ontario Municipal per Capita Transit Spending">
+<meta name="twitter:description" content="Municipal transit is a hot button issue these days, especially in Toronto and the GTHA. With issues surrounding funding and expansion being especially pertinent, I’ve always wondered: is there a bett">
+<meta name="twitter:image" content="http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/yrt.JPG">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../../../../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../../../../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Ontario Municipal per Capita Transit Spending</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/jquery.timeliny.css">
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="../../../../atom.xml" title="Joshua Loong" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+</head>
+
+<body>
+    
+      <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../../../07/03/Topic-Modelling-Song-Lyrics-An-Exploration-in-Unsupervised-Text-Analytics/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$("#i-prev").toggle();" onmouseout="$("#i-prev").toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../../22/Getting-Started-With-Open-edX-Development/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$("#i-next").toggle();" onmouseout="$("#i-next").toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$("#i-top").toggle();" onmouseout="$("#i-top").toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$("#i-share").toggle();" onmouseout="$("#i-share").toggle();" onclick="$("#share").toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&text=Ontario Municipal per Capita Transit Spending"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&title=Ontario Municipal per Capita Transit Spending"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&is_video=false&description=Ontario Municipal per Capita Transit Spending"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Ontario Municipal per Capita Transit Spending&body=Check out this article: http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&title=Ontario Municipal per Capita Transit Spending"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&title=Ontario Municipal per Capita Transit Spending"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&title=Ontario Municipal per Capita Transit Spending"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&title=Ontario Municipal per Capita Transit Spending"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&name=Ontario Municipal per Capita Transit Spending&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#So-how-do-we-get-past-this"><span class="toc-number">1.</span> <span class="toc-text">So how do we get past this?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Transit-spending-from-a-per-capita-perspective"><span class="toc-number">2.</span> <span class="toc-text">Transit spending from a per capita perspective</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Limitations"><span class="toc-number">3.</span> <span class="toc-text">Limitations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Framing-the-conversation"><span class="toc-number">4.</span> <span class="toc-text">Framing the conversation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thanks-for-reading"><span class="toc-number">5.</span> <span class="toc-text">Thanks for reading!</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Ontario Municipal per Capita Transit Spending
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">Joshua Loong</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-03-27T04:00:00.000Z" itemprop="datePublished">2018-03-27</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="../../../../tags/public-policy/">public-policy</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <img src="/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/yrt.JPG">
+<p>Municipal transit is a hot button issue these days, especially in Toronto and the GTHA. With issues surrounding funding and expansion being especially pertinent, I’ve always wondered: is there a better way to sell both governments and other taxpayers on <strong>the idea of transit</strong>.</p>
+<p>Transit is important. It is a public good that has a variety of <a href="http://www.apta.com/resources/statistics/Pages/benefits.aspx" target="_blank" rel="noopener">economic, societal, and health benefits</a>. But as much as we can harp about specific benefits, many of them can be abstract, and it may not necessarily connect with the disgruntled taxpayer or public servant.</p>
+<p>A person that is looking at the newspaper or an article linked on Facebook and will only see the gigantic aggregate number which, for some municipalities in Ontario, could reach hundreds of millions of dollars. This becomes especially pertinent for people that are fiscally conservative that may abhor the large costs the public purse has to spend on transit.</p>
+<p><strong>DISCLAIMER:</strong> Before I go on I’d like to say that I do work for the Ontario Liberal Party, but the views expressed here are not a reflection of the views of the party. On another note, this post was not produced under the direction of my job duties. I’m just interested in civic issues and playing around with data 😊</p>
+<h2 id="So-how-do-we-get-past-this"><a href="#So-how-do-we-get-past-this" class="headerlink" title="So how do we get past this?"></a>So how do we get past this?</h2><p>There’s a group at <a href="https://civictech.ca" target="_blank" rel="noopener">Civic Tech Toronto</a> called <a href="http://budgetpedia.ca/" target="_blank" rel="noopener">Budgetpedia</a> that is working on efforts to make municipal budgets more accessible. I love their work, and have always wanted to get involved but never found the time given <a href="http://joshualoong.com/projects">my other commitments</a>.</p>
+<p>But the other day, one of the Budgetpedia members posted on the <a href="civictechto.slack.com/">Civic Tech Toronto slack</a> an article about the <a href="http://tabs.budgetpedia.ca/comparison_of_public_transit_operating_costs_of_ontario_municipalities_2016/index.html" target="_blank" rel="noopener">operating budgets of Ontario municipalities.</a></p>
+<p>This came with a great graphic which can be seen below:</p>
+<img src="/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/chart.png">
+<p>It’s a bit hard to see here, but in essence it is a bar graph of the total transit operating budgets of all the municipalities in Ontario with a transit system.</p>
+<p>Not surprisingly it shows that Toronto’s operating transit costs dwarfs that of other municipalities in Ontario. However, what was interesting was that Toronto is not just a heavy spender, but it takes up 56% of all of the province’s transit operating costs.</p>
+<p>But it got me thinking, instead of just looking at <strong>aggregate cost</strong>, what is the <strong>relative cost</strong>? For every person in a municipality, how much of your taxpayer money is going towards sustaining the buses, trains, and subways that run across the province?</p>
+<h2 id="Transit-spending-from-a-per-capita-perspective"><a href="#Transit-spending-from-a-per-capita-perspective" class="headerlink" title="Transit spending from a per capita perspective"></a>Transit spending from a per capita perspective</h2><p>I decided to reuse some of the data in the above article, and scraped the populations of each of the municipalities mentioned. With this data in hand, I came up with the following graphic:</p>
+<iframe allowfullscreen frameborder="0" height="1550" mozallowfullscreen="" msallowfullscreen="" oallowfullscreen="" src="https://plot.ly/~joshua-t-loong/10.embed?link=false&amp;modebar=false&amp;logo=false" webkitallowfullscreen="" width="100%"></iframe>
+
+<p>These are all the municipalities in Ontario with transit systems. I measured each cities operating budget for transit per capita (ie operating budget divided by the municipal population). The data is sorted in order from least populous to most populous municipality.</p>
+<p>Just off the bat we can find some interesting insights:</p>
+<ul>
+<li>Although Toronto outpaces all municipalities in aggregate operating spending (by a metric boatload), it is not the most expensive transit system on a per capita basis. Though it should be noted it is still in the upper tier (along with all the other major urban centres) and is second overall.</li>
+<li>Waterloo is far and away the most expensive transit system on a per capita basis. Being a student at Waterloo this is extremely interesting, I wonder why this is the case.</li>
+<li>Rural towns and smaller urban centres can now be much better directly compared to larger ones. On an aggregate scale, Toronto’s large spending numbers just dwarf the graphic but here we can get more subtle comparisons.</li>
+<li>Many municipalities transit systems are serving less people than others, yet costing much more than other municipal systems with much higher populations.</li>
+</ul>
+<h2 id="Limitations"><a href="#Limitations" class="headerlink" title="Limitations"></a>Limitations</h2><p>Now these aren’t perfect comparisons. From what I can think of these are some of the limitations of a graphic like this:</p>
+<ul>
+<li>This doesn’t factor in capital costs which can be a huge expense for both the province and municipalities.</li>
+<li>It also fails to account for the fact that not all of municipalities population are taxpayers.</li>
+<li>Regions like Peel and York are ranked highly in population, but they don’t shoulder the main burden for funding operating costs because they are offloaded to municipalities within those regions like Brampton and Markham. This makes them seem like wizards running extremely low operating costs per capita.</li>
+<li>Some municipalities may have low populations within their borders, but their transit system may have a larger catchment area. Meaning that people outside of that population are also using their transit, increasing costs per capita.</li>
+</ul>
+<h2 id="Framing-the-conversation"><a href="#Framing-the-conversation" class="headerlink" title="Framing the conversation"></a>Framing the conversation</h2><p>I think we too often tend to talk about huge aggregate numbers, but then it becomes so hard to have a conversation comparing transit systems across the province. Especially because Toronto seems like they hog the lions share of funding.</p>
+<p>I think a graphic like this can be really useful to frame the conversation. Whether you’re an activist or concerned citizen or public servant, but operating costs in <strong>relative terms</strong> allow us to better conceptualize the personal cost of supporting a transit system. With this dollar amount you can look at your own tax bill and understand how much of it is going to transit (roughly).</p>
+<h2 id="Thanks-for-reading"><a href="#Thanks-for-reading" class="headerlink" title="Thanks for reading!"></a>Thanks for reading!</h2><p> If you’re interested in technical details of how I have all the code <a href="https://github.com/jtloong/blog_projects" target="_blank" rel="noopener">on Github</a> under the <code>ontario_transit_spending</code> folder.</p>
+<p> In brief, I used Beautiful Soup to scrape the data, Pandas for data handling, and Plotly.py for the interactive graph.</p>
+<p>If you have any thoughts and would like to dialogue about transit or really anything else, you can give me a shout <a href="https://twitter.com/jtloong" target="_blank" rel="noopener">@jtloong</a></p>
+
+  </div>
+</article>
+
+
+
+<div class="talkyard-comments" data-discussion-id="" style="margin-top: 45px;">
+<noscript>Please enable Javascript to view comments.</noscript>
+<p style="margin-top: 25px; opacity: 0.9; font-size: 96%">Comments powered by
+<a href="https://www.talkyard.io">Talkyard</a>.</p>
+</div>
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#So-how-do-we-get-past-this"><span class="toc-number">1.</span> <span class="toc-text">So how do we get past this?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Transit-spending-from-a-per-capita-perspective"><span class="toc-number">2.</span> <span class="toc-text">Transit spending from a per capita perspective</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Limitations"><span class="toc-number">3.</span> <span class="toc-text">Limitations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Framing-the-conversation"><span class="toc-number">4.</span> <span class="toc-text">Framing the conversation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thanks-for-reading"><span class="toc-number">5.</span> <span class="toc-text">Thanks for reading!</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&text=Ontario Municipal per Capita Transit Spending"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&title=Ontario Municipal per Capita Transit Spending"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&is_video=false&description=Ontario Municipal per Capita Transit Spending"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Ontario Municipal per Capita Transit Spending&body=Check out this article: http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&title=Ontario Municipal per Capita Transit Spending"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&title=Ontario Municipal per Capita Transit Spending"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&title=Ontario Municipal per Capita Transit Spending"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&title=Ontario Municipal per Capita Transit Spending"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://joshualoong.com/2018/03/27/Ontario-Municipal-per-Capita-Transit-Spending/&name=Ontario Municipal per Capita Transit Spending&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$("#toc-footer").toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$("#share-footer").toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$("#nav-footer").toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2021 Joshua Loong
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery.timeliny@1.0.1/dist/jquery.timeliny.min.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="../../../../lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../../lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="../../../../lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="../../../../lib/jquery/jquery.min.js"></script>
+<script src="../../../../lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="../../../../lib/timeliny/jquery.timeliny.js"></script>
+<script src="../../../../js/main.js"></script>
+
+<script>talkyardServerUrl='https://comments-for-joshualoong-com.talkyard.net';</script>
+<script async defer src="https://c1.ty-cdn.net/-/talkyard-comments.min.js"></script>
+
+<script>
+var url = window.location.pathname.split("/")[1];
+
+if (url == 'tags'){
+    elems = document.getElementsByClassName("non-categorized-posts");
+    for (var i=0;i<elems.length;i+=1){
+        elems[i].style.display = 'none';
+    }
+}
+</script>
+
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+

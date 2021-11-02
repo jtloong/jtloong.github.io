@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112023430-1"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112023430-1');
+    </script>
+
+    <meta name="description" content="I’d always heard about the package support for traditional statistics in R, but never really had the need or opportunity to dive into it until this year (from working at the amazing Best Buy Canada a">
+<meta name="keywords" content="data-science">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Appreciating R: The Ease of Testing Linear Model Assumptions">
+<meta property="og:url" content="http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/index.html">
+<meta property="og:site_name" content="Joshua Loong">
+<meta property="og:description" content="I’d always heard about the package support for traditional statistics in R, but never really had the need or opportunity to dive into it until this year (from working at the amazing Best Buy Canada a">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/regression.png">
+<meta property="og:image" content="http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/diagnostic-stats.PNG">
+<meta property="og:image" content="http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/diagnostic-plots.png">
+<meta property="og:updated_time" content="2019-09-23T15:48:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Appreciating R: The Ease of Testing Linear Model Assumptions">
+<meta name="twitter:description" content="I’d always heard about the package support for traditional statistics in R, but never really had the need or opportunity to dive into it until this year (from working at the amazing Best Buy Canada a">
+<meta name="twitter:image" content="http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/regression.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="../../../../images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="../../../../images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Appreciating R: The Ease of Testing Linear Model Assumptions</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/jquery.timeliny.css">
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="../../../../atom.xml" title="Joshua Loong" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+</head>
+
+<body>
+    
+      <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="../../../../2020/01/08/Books-Read-in-2019/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$("#i-prev").toggle();" onmouseout="$("#i-prev").toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="../../../05/25/The-Favourite-Books-of-Almost-200-Students-in-Georgia/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$("#i-next").toggle();" onmouseout="$("#i-next").toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$("#i-top").toggle();" onmouseout="$("#i-top").toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$("#i-share").toggle();" onmouseout="$("#i-share").toggle();" onclick="$("#share").toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&text=Appreciating R: The Ease of Testing Linear Model Assumptions"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&title=Appreciating R: The Ease of Testing Linear Model Assumptions"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&is_video=false&description=Appreciating R: The Ease of Testing Linear Model Assumptions"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Appreciating R: The Ease of Testing Linear Model Assumptions&body=Check out this article: http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&title=Appreciating R: The Ease of Testing Linear Model Assumptions"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&title=Appreciating R: The Ease of Testing Linear Model Assumptions"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&title=Appreciating R: The Ease of Testing Linear Model Assumptions"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&title=Appreciating R: The Ease of Testing Linear Model Assumptions"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&name=Appreciating R: The Ease of Testing Linear Model Assumptions&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Assumptions-Testing"><span class="toc-number">1.</span> <span class="toc-text">Assumptions Testing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Notes"><span class="toc-number">2.</span> <span class="toc-text">Notes:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">3.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Appreciating R: The Ease of Testing Linear Model Assumptions
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">Joshua Loong</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2019-09-20T21:16:30.000Z" itemprop="datePublished">2019-09-20</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="../../../../tags/data-science/">data-science</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <img src="/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/regression.png">
+<p>I’d always heard about the package support for traditional statistics in R, but never really had the need or opportunity to dive into it until this year (from working at the amazing Best Buy Canada and the quantitative biology classes I’m taking right now). And while I’m still getting used to it, I’ve been slowly getting a much bigger appreciation for how useful it really can be.</p>
+<p>I can say it’s great to use, but I doubt that will sway you if you’re a heavy Python user (as it did not with me) without a really, really concrete example. I hope this example gives you a peek at the potential uses that I myself am still discovering </p>
+<h2 id="Assumptions-Testing"><a href="#Assumptions-Testing" class="headerlink" title="Assumptions Testing"></a>Assumptions Testing</h2><p>A HUGE (and I mean <strong>HUGE</strong>) deal in science is good statistical practice. Without good statistical practice much of the research and insights we produce are useless, and an incredibly important aspect of it is assumptions testing<sup>[1]</sup>. </p>
+<p>All statistical models and tests have underlying mathematical assumptions on the types of conditions upon we can generate reliable results (Hoekstra et al., 2012). What this means is that before we go off and generate predictions, p-values and correlation coefficients, we need to understand whether our data fits certain assumption criteria in order to avoid Type I or II errors given the technique at hand.</p>
+<p>This week I’ve been working on an applied biostats assignment, not about linear models directly but made heavy use of them<sup>[2]</sup>, and came across this wonderful package called <code>gvlma</code>. CRAN link <a href="https://cran.r-project.org/web/packages/gvlma/index.html" target="_blank" rel="noopener">here</a>. </p>
+<p>The beauty of <code>gvlma</code> is that it’s a comprehensive, automatic testing suite for many of the assumptions of general linear models. It does both statistical tests and diagnostic plots using an extremely simple implementation for powerful results. </p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(<span class="string">"gvlma"</span>)</span><br><span class="line"></span><br><span class="line">model &lt;- lm(y ~ x, data)</span><br><span class="line">summary(gvlma(model))</span><br><span class="line">plot(gvlma(model))</span><br></pre></td></tr></table></figure>
+<p>With example outputs of:</p>
+<img src="/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/diagnostic-stats.PNG">
+<img src="/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/diagnostic-plots.png">
+<p>The package is an implementation of a paper by Pena &amp; Slate called <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2820257/" target="_blank" rel="noopener">Global Validation of Linear Model Assumptions</a> and allows you to quickly check for:</p>
+<ol>
+<li><p><strong>Linearity</strong> - the Global Stat tests for the null hypothesis that our model is a linear combination of its predictors<sup>[3]</sup>. </p>
+</li>
+<li><p><strong>Heteroscedasticity</strong> -  the respective stat tests for the null that the variance of your residuals is relatively constant.</p>
+</li>
+<li><p><strong>Normality</strong> - skewness and kurtosis tests help you understand if the residuals of your data fit a normal distribution<sup>[4]</sup>. If the null is rejected you probably need to transform your data in some way (like a log transform). This can also be assessed by looking at the normal probability plot it generates.</p>
+</li>
+</ol>
+<p>Furthermore, the diagnostic plots also let you understand the relation between your data and these assumptions visually. Other useful capabilities are the link function test which is used for understanding whether the underlying data is categorical or continuous. </p>
+<p>As far as I know, there’s no comparable tool suite for models in Python<sup>[5]</sup>. There is some support for <a href="https://www.statsmodels.org/dev/diagnostic.html" target="_blank" rel="noopener">diagnostics in statsmodels</a> but it doesn’t seem as intuitive to me than what we find here. </p>
+<p>But as you can see, this is an incredibly useful package to have for doing traditional statistics. I was blown away with how seamless it was to do this in R. Hopefully this is an interesting example to help push any Python users to try it out 😊</p>
+<p>Thanks for reading!</p>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h2><p>[1] The result of poor statistical practice is a huge contributer to the replication crisis we have in multiple fields in the physical and social sciences. You can read more in Shavit &amp; Ellison’s book <a href="https://www.goodreads.com/book/show/32073333-stepping-in-the-same-river-twice" target="_blank" rel="noopener">Stepping in the Same River Twice: Replication in Biological Research</a>. </p>
+<p>[2] For those interested, the assignment was in a niche area of applied statistical ecology called critical thermal polygons. Some examples of which can be found in papers by <a href="https://www.fba.org.uk/journals/index.php/FF/article/viewFile/259/160" target="_blank" rel="noopener">Elliot</a> or <a href="http://sci-hub.tw/https://www.sciencedirect.com/science/article/pii/S0306456509000199" target="_blank" rel="noopener">Eme &amp; Bennett</a> (2010; 2009).</p>
+<p>[3] Made a bit of a mistake here in the first version of the post and <a href="https://old.reddit.com/r/rstats/comments/d7elo7/appreciating_r_the_ease_of_testing_linear_model/f0zx8f1/" target="_blank" rel="noopener">/u/OrdoMaas</a> left a nice write up on the intuition behind the corrected linearity assumption:  </p>
+<blockquote>
+<p>It’s a common misconception that linearity means that we want to fit a straight line. Instead, it means that we want the model to be a linear combination of the predictors (where linear is used in the linear algebra sense), which is the same thing as saying we want all of our predictors to be added together. This assumption would be violated if the model were, for example, $y = \beta_0 + \exp(\beta_1)X + e$. The relationship between $\beta_0$ and $\beta_1$ would not be additive. On the other hand, a curvy line could be fit by a linear model e.g $y = \beta_0 + \beta_1 \sin(x) + e$. This model satisfies the linearity assumption because there is an additive relationship between $\beta_0$ and $\beta_1$.</p>
+</blockquote>
+<p>[4] Someone pointed out to me that skewness and kurtosis tests may be sensitive to sample size given their experience with the same issue with <a href="https://en.wikipedia.org/wiki/Jarque%E2%80%93Bera_test" target="_blank" rel="noopener">Jarque-Barea tests</a>, which tests these properties as well. I dug a bit back into the original Slate &amp; Peña paper and they actually did some empirical estimates finding the same thing: </p>
+<blockquote>
+<p>Note that for small sample sizes (n ≤ 30), the asymptotic approximation is not satisfactory… the procedures tend to be conservative. </p>
+</blockquote>
+<p>It may be more useful to use the normal probability plots in small sample scenarios. </p>
+<p>[5] These diagnostics are well supported in SPSS, but the world needs to move away from point and click statistics software so I wouldn’t recommend using that. From what I remember, it is also decently supported in SAS for those that use it. </p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>Hoekstra, R., Kiers, H., &amp; Johnson, A. (2012). <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2012.00137/full" target="_blank" rel="noopener">Are assumptions of well-known statistical techniques checked, and why (not)?</a>. <em>Frontiers in psychology, 3, 137</em>.</p>
+<p>Peña, E. A., &amp; Slate, E. H. (2006). <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2820257/" target="_blank" rel="noopener">Global validation of linear model assumptions</a>. <em>Journal of the American Statistical Association, 101</em>(473), 341-354.</p>
+
+  </div>
+</article>
+
+
+
+<div class="talkyard-comments" data-discussion-id="" style="margin-top: 45px;">
+<noscript>Please enable Javascript to view comments.</noscript>
+<p style="margin-top: 25px; opacity: 0.9; font-size: 96%">Comments powered by
+<a href="https://www.talkyard.io">Talkyard</a>.</p>
+</div>
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Assumptions-Testing"><span class="toc-number">1.</span> <span class="toc-text">Assumptions Testing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Notes"><span class="toc-number">2.</span> <span class="toc-text">Notes:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">3.</span> <span class="toc-text">References</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&text=Appreciating R: The Ease of Testing Linear Model Assumptions"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&title=Appreciating R: The Ease of Testing Linear Model Assumptions"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&is_video=false&description=Appreciating R: The Ease of Testing Linear Model Assumptions"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Appreciating R: The Ease of Testing Linear Model Assumptions&body=Check out this article: http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&title=Appreciating R: The Ease of Testing Linear Model Assumptions"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&title=Appreciating R: The Ease of Testing Linear Model Assumptions"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&title=Appreciating R: The Ease of Testing Linear Model Assumptions"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&title=Appreciating R: The Ease of Testing Linear Model Assumptions"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://joshualoong.com/2019/09/20/Appreciating-R-The-Ease-of-Testing-Linear-Model-Assumptions/&name=Appreciating R: The Ease of Testing Linear Model Assumptions&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$("#toc-footer").toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$("#share-footer").toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$("#nav-footer").toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2021 Joshua Loong
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="../../../../index.html">Home</a></li>
+         
+          <li><a href="../../../../about/">About</a></li>
+         
+          <li><a href="../../../../now/">Now</a></li>
+         
+          <li><a href="../../../../reading/">Reading</a></li>
+         
+          <li><a href="../../../../archives/">Writing</a></li>
+         
+          <li><a href="../../../../notes/">Notes</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery.timeliny@1.0.1/dist/jquery.timeliny.min.js"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="../../../../lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../../lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="../../../../lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="../../../../lib/jquery/jquery.min.js"></script>
+<script src="../../../../lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="../../../../lib/timeliny/jquery.timeliny.js"></script>
+<script src="../../../../js/main.js"></script>
+
+<script>talkyardServerUrl='https://comments-for-joshualoong-com.talkyard.net';</script>
+<script async defer src="https://c1.ty-cdn.net/-/talkyard-comments.min.js"></script>
+
+<script>
+var url = window.location.pathname.split("/")[1];
+
+if (url == 'tags'){
+    elems = document.getElementsByClassName("non-categorized-posts");
+    for (var i=0;i<elems.length;i+=1){
+        elems[i].style.display = 'none';
+    }
+}
+</script>
+
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
